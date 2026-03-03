@@ -70,11 +70,57 @@
 }
 
 @media (max-width: 768px) {
+    .about-hero {
+        padding: 110px 5% 70px;
+    }
+
     .about-title {
         font-size: 40px;
     }
 
+    .about-content {
+        padding: 60px 5%;
+    }
+
+    .content-block {
+        padding-left: 25px;
+    }
+
+    .content-grid {
+        gap: 50px;
+    }
+
+    .block-title {
+        font-size: 22px;
+    }
+
+    .about-quote {
+        padding: 60px 5%;
+    }
+
     .quote-container blockquote {
         font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title {
+        font-size: 28px;
+    }
+
+    .content-block {
+        padding-left: 18px;
+    }
+
+    .block-title {
+        font-size: 19px;
+    }
+
+    .content-block p {
+        font-size: 14px;
+    }
+
+    .quote-container blockquote {
+        font-size: 18px;
     }
 }

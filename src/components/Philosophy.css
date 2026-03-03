@@ -96,3 +96,36 @@
         gap: 60px;
     }
 }
+
+@media (max-width: 768px) {
+    .philosophy {
+        padding: 60px 5%;
+    }
+
+    .phil-title {
+        font-size: 34px;
+    }
+
+    .point-card {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .phil-title {
+        font-size: 28px;
+    }
+
+    .phil-desc {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .point-card {
+        padding: 20px;
+    }
+
+    .point-title {
+        font-size: 17px;
+    }
+}

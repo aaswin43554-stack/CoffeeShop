@@ -18,10 +18,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    touch-action: manipulation;
 }
 
 body {
@@ -33,7 +36,10 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-serif);
     font-weight: 500;
 }
@@ -58,6 +64,7 @@ section {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -120,4 +127,34 @@ section {
     width: 60px;
     background: var(--accent-ochre);
     opacity: 0.3;
+}
+
+/* Global mobile improvements */
+@media (max-width: 768px) {
+    .btn-primary {
+        padding: 13px 28px;
+        font-size: 13px;
+    }
+
+    .btn-outline {
+        padding: 11px 24px;
+    }
+
+    /* Improve touch targets */
+    button,
+    a {
+        min-height: 44px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-label {
+        letter-spacing: 2px;
+        font-size: 10px;
+    }
+
+    .section-label::before,
+    .section-label::after {
+        width: 30px;
+    }
 }

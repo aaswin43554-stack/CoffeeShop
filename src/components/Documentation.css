@@ -68,3 +68,39 @@
         height: 300px;
     }
 }
+
+@media (max-width: 768px) {
+    .documentation {
+        padding: 60px 5%;
+    }
+
+    .doc-card {
+        height: 260px;
+    }
+
+    .doc-content {
+        padding: 25px;
+    }
+
+    .doc-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .doc-card {
+        height: 220px;
+    }
+
+    .doc-content {
+        padding: 20px;
+    }
+
+    .doc-title {
+        font-size: 18px;
+    }
+
+    .doc-subtitle {
+        font-size: 12px;
+    }
+}

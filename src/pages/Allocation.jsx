@@ -44,20 +44,11 @@ const Allocation = () => {
     const { addToCart } = useCart();
     const navigate = useNavigate();
     const [selectedProduct, setSelectedProduct] = useState(PRODUCTS[0]);
-    const [activeFlavors, setActiveFlavors] = useState([]);
 
     const handleSelectProduct = (p) => {
         setSelectedProduct(p);
-        setActiveFlavors([]);
     };
 
-    const toggleFlavor = (flavor) => {
-        setActiveFlavors(prev =>
-            prev.includes(flavor)
-                ? prev.filter(f => f !== flavor)
-                : [...prev, flavor]
-        );
-    };
 
     const handleReserve = () => {
         addToCart({
@@ -151,13 +142,9 @@ const Allocation = () => {
                         <p className="profile-desc">Structured, refined, and minimal. A clean finish with vibrant acidity.</p>
                         <div className="flavor-grid">
                             {selectedProduct.flavors.map(flavor => (
-                                <button
-                                    key={flavor}
-                                    className={`flavor-tag ${activeFlavors.includes(flavor) ? 'active' : ''}`}
-                                    onClick={() => toggleFlavor(flavor)}
-                                >
+                                <span key={flavor} className="flavor-tag">
                                     {flavor}
-                                </button>
+                                </span>
                             ))}
                         </div>
                     </div>

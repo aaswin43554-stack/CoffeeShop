@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Journal.css';
 
 const Journal = () => {
+    const [email, setEmail] = useState('');
+    const [joined, setJoined] = useState(false);
+
+    const handleJoin = (e) => {
+        e.preventDefault();
+        if (email.trim()) {
+            setJoined(true);
+        }
+    };
+
     const posts = [
         {
             date: 'OCT 24, 2025',
@@ -51,7 +61,25 @@ const Journal = () => {
                 <div className="cta-content">
                     <h3>Never Miss a Note</h3>
                     <p>Join our newsletter to receive field notes and early access to the next allocation.</p>
-                    <button className="cta-btn">JOIN ALLOCATION LIST</button>
+
+                    {joined ? (
+                        <div className="cta-success">
+                            <span className="cta-success-icon">✓</span>
+                            You're on the list. We'll be in touch.
+                        </div>
+                    ) : (
+                        <form className="cta-form" onSubmit={handleJoin}>
+                            <input
+                                type="email"
+                                className="cta-email-input"
+                                placeholder="Enter your email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                            <button type="submit" className="cta-btn">JOIN ALLOCATION LIST</button>
+                        </form>
+                    )}
                 </div>
             </section>
         </div>

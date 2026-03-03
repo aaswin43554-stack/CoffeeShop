@@ -187,3 +187,60 @@
         display: none;
     }
 }
+
+@media (max-width: 768px) {
+    .roast-release {
+        padding: 60px 5%;
+    }
+
+    .release-details {
+        padding: 35px 25px;
+    }
+
+    .release-stats {
+        padding: 35px 25px;
+    }
+
+    .release-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+
+    .release-title {
+        font-size: 28px;
+    }
+
+    .info-label {
+        width: 110px;
+        font-size: 11px;
+    }
+
+    .info-value {
+        font-size: 15px;
+    }
+
+    .stats-grid {
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .release-details,
+    .release-stats {
+        padding: 25px 20px;
+    }
+
+    .info-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .info-label {
+        width: auto;
+    }
+}

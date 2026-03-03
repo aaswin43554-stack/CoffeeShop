@@ -87,3 +87,54 @@
         font-size: 32px;
     }
 }
+
+@media (max-width: 768px) {
+    .current-estate {
+        padding: 60px 5%;
+    }
+
+    .estate-header {
+        margin-bottom: 35px;
+    }
+
+    .estate-title {
+        font-size: 26px;
+    }
+
+    .estate-image {
+        height: 260px;
+    }
+
+    .estate-description {
+        padding: 30px 20px;
+        gap: 15px;
+    }
+
+    .estate-description p {
+        font-size: 16px;
+    }
+
+    .estate-meta {
+        font-size: 12px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .estate-title {
+        font-size: 22px;
+    }
+
+    .estate-image {
+        height: 210px;
+    }
+
+    .estate-description {
+        padding: 20px 15px;
+    }
+
+    .estate-description p {
+        font-size: 14px;
+    }
+}

@@ -8,7 +8,7 @@ import Journal from './pages/Journal';
 import { CartProvider } from './context/CartContext';
 import Cart from './pages/Cart';
 import Payment from './pages/Payment';
-import Signup from './pages/Signup';
+
 import OrderSuccess from './pages/OrderSuccess';
 
 // Simple Contact placeholder
@@ -35,7 +35,7 @@ function App() {
                             <Route path="/contact" element={<Contact />} />
                             <Route path="/cart" element={<Cart />} />
                             <Route path="/payment" element={<Payment />} />
-                            <Route path="/signup" element={<Signup />} />
+
                             <Route path="/success" element={<OrderSuccess />} />
                         </Routes>
                     </main>

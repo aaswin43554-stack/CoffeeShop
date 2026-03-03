@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Philosophy.css';
 
 const Philosophy = () => {
+    const navigate = useNavigate();
     const points = [
         {
             num: '01',
@@ -34,7 +36,7 @@ const Philosophy = () => {
                     <p className="phil-desc-small">
                         Limited production. Allocation closes when sold out.
                     </p>
-                    <button className="philosophy-btn">READ OUR STORY</button>
+                    <button className="philosophy-btn" onClick={() => navigate('/about')}>READ OUR STORY</button>
                 </div>
 
                 <div className="phil-right">

@@ -62,7 +62,7 @@ const Journey = () => {
                             </div>
                         </div>
 
-                        <a href="/cart" className="btn-primary secure-btn">Secure Allocation <span>→</span></a>
+                        <a href="/allocation" className="btn-primary secure-btn">Secure Allocation <span>→</span></a>
                     </div>
 
                     <div className="release-bg">

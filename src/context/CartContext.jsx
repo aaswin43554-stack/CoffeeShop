@@ -28,6 +28,9 @@ export const CartProvider = ({ children }) => {
     const addToCart = (product) => {
         setCartItems(prev => {
             const existing = prev.find(item => item.id === product.id);
+            if (!existing) {
+                alert("Min 2 is packed is compulsion. Added 2 packs.");
+            }
             if (existing) {
                 return prev.map(item =>
                     item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
@@ -42,7 +45,10 @@ export const CartProvider = ({ children }) => {
     };
 
     const updateQuantity = (id, quantity) => {
-        if (quantity < 1) return;
+        if (quantity < 2) {
+            alert("Minimum 2 packers is compulsion per order item!");
+            return;
+        }
         setCartItems(prev => prev.map(item =>
             item.id === id ? { ...item, quantity } : item
         ));
@@ -67,3 +73,4 @@ export const CartProvider = ({ children }) => {
         </CartContext.Provider>
     );
 };
+

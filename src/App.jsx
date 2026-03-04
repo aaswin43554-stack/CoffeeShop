@@ -2,9 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
-import Allocation from './pages/Allocation';
 import About from './pages/About';
-import Journal from './pages/Journal';
 import { CartProvider } from './context/CartContext';
 import Cart from './pages/Cart';
 import Payment from './pages/Payment';
@@ -29,9 +27,7 @@ function App() {
                     <main>
                         <Routes>
                             <Route path="/" element={<Home />} />
-                            <Route path="/allocation" element={<Allocation />} />
                             <Route path="/about" element={<About />} />
-                            <Route path="/journal" element={<Journal />} />
                             <Route path="/contact" element={<Contact />} />
                             <Route path="/cart" element={<Cart />} />
                             <Route path="/payment" element={<Payment />} />

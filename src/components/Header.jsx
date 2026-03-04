@@ -29,9 +29,9 @@ const Header = () => {
                 </Link>
 
                 <ul className={`nav-links ${menuOpen ? 'nav-open' : ''}`}>
-                    <li><Link to="/" className={isActive('/') ? 'active' : ''}>HOME</Link></li>
-                    <li><Link to="/allocation" className={isActive('/allocation') ? 'active' : ''}>ALLOCATION</Link></li>
-                    <li><Link to="/journal" className={isActive('/journal') ? 'active' : ''}>JOURNAL</Link></li>
+                    <li><a href="/#" className={location.pathname === '/' && !location.hash ? 'active' : ''} onClick={() => setMenuOpen(false)}>HOME</a></li>
+                    <li><a href="/#allocation" className={location.hash === '#allocation' || location.pathname === '/allocation' ? 'active' : ''} onClick={() => setMenuOpen(false)}>ALLOCATION</a></li>
+                    <li><a href="/#journal" className={location.hash === '#journal' || location.pathname === '/journal' ? 'active' : ''} onClick={() => setMenuOpen(false)}>JOURNAL</a></li>
                 </ul>
 
                 {/* Cart icon — always visible on desktop & mobile */}
